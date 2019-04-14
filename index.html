@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Map</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="referrer" content="no-referrer"> 
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 50%;
+
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+        function initMarker () {
+          
+        };
+        let gm_api_key = "AIzaSyDLOKCxtRd_pEqn4_1eD2WjVXdtS8V4p3s";//Ahmads API Key
+        var map;
+        function initMap() {
+          var dci_pos = { 
+              lat: 53.551623,
+              lng: 10.007720599999999
+          }
+          map = new google.maps.Map(document.getElementById('map'), {
+            center: dci_pos,
+            zoom: 15
+          });
+          var marker = new google.maps.Marker({
+            position: dci_pos,
+            map: map, 
+            animation: google.maps.Animation.DROP,
+            title: 'DCI SCHOOl!'
+          });
+          marker.setAnimation(google.maps.Animation.BOUNCE);
+            
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDLOKCxtRd_pEqn4_1eD2WjVXdtS8V4p3s&callback=initMap"
+    async defer></script>
+  </body>
+</html>
