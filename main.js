@@ -1,12 +1,22 @@
     var dci_pos = { 
-        lat: 53.551623,
-        lng: 10.007720599999999
+        lat: 53.555630,
+        lng: 10.009230
     }
     /*
     TODO :  onclick marker open link with key,
             on click icon route directions,
 
     */
+   function setMapFocus () {
+        if ($(window).width() >= 992 ) {
+        var qtMapinPX = ( $('#map').width() / 4 ) * 1.1;
+        map.setCenter(dci_pos);
+        map.panBy(-qtMapinPX, 0);
+            $(".seperator h3").show();
+        } else {
+            $(".seperator h3").hide();
+        }
+    };
     function initMarker () {
         var marker = new google.maps.Marker({
             position: dci_pos,
@@ -25,37 +35,18 @@
             zoom: 15
         });
         initMarker();
+        setMapFocus();
     }
+    /**
+     * Event Handler for Contact
+     */
     $(".buttonSubmit").on("click",function(e){
         e.preventDefault();
     });
-    function getLocation() {
-        return new Promise(function(resolve, reject){ 
-            navigator.geolocation.getCurrentPosition(
-                function(position) { resolve(position); },
-                function(error) { reject(error); }
-            )
-            });
-    };
-  
-    function returnRouteCall () {
-        var _r_origin = "";
-        var _r_destination = dci_pos;
-        var RouteCall_URL = "https://maps.googleapis.com/maps/api/directions/json?origin="+_r_origin+"&destination="+_r_destination+"&key="+API_Key;
-        return RouteCall_URL;
-    }
-
     $(".btn.openRoute").on("click",function(e){
         e.preventDefault();
-        const r_response = getLocation()
-        .then(  position => 
-        ( {
-            "latitude": position.coords.latitude, 
-            "longitude": position.coords.longitude
-        } )
-        .then(  latLong => { unlock_request(latLong) }, 
-                error => { get_location_denied(error[1]) }
-            )
-        );
-        console.log(r_response);
+        /* open Route in new or same window*/
     });
+    $(window).on("resize",function() {
+        setMapFocus();
+    })

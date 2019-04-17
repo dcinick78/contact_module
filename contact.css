@@ -42,8 +42,14 @@
 	text-align: center;
 	border-radius: 100px;
 }
+.contact_section .seperator h3 {
+	padding-top:30px;
+	padding-left:280px;
+	text-align:left;
+	width:100%;
+}
 .contact_module h4,
-.contact_module h3 {
+.contact_module h3{
 	text-align:center;
 	width:100%;
 	padding:25px 0;
@@ -81,7 +87,7 @@
 		width: 100%;
 	}
 	.contact_module .fa-map-marked-alt {
-		font-size:10rem;
+		font-size:5rem;
 		color: #007bff;
 	}
 }
