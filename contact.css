@@ -71,9 +71,9 @@
 	}
 	.contact_module .info-box {
 		position:absolute;
-		right:2.5%; top:10vH;
+		right:2.5%; top:20vH;
 		background: rgba(255,255,255,.7);
-		padding:30px 45px 30px 45px;
+		padding:30px;
 		z-index: 3;
 		text-align:left;
 		width:auto;
