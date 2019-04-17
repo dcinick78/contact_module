@@ -18,38 +18,61 @@
     <section class="contact_section"> <!-- structure class -->
       <div class="contact_module">
         <!-- boilerplate form -->
+        <div class="info-box">
+            <h2>Contact</h2><br>
+            <img src="dci_pin.png" width="100px" /><br><br>
+            <span>DCI School</span><br>
+            <span>Lange Reihe 14,</span><br>
+            <span>Hamburg, 20099</span><br>
+        </div>
+
         <div class="form-wrapper">
+       
         <form>
           <div class="form-group">
               <label for="inputFirstName">First Name</label>
               <input type="email" class="form-control" id="inputFirstName" 
-              placeholder="First Name" require/>
+              placeholder="Max" require/>
           </div>
           <div class="form-group">
               <label for="inputLastName">Last Name</label>
               <input type="email" class="form-control" id="inputLastName" 
-              placeholder="Last Name" required/>
+              placeholder="Mustermann" required/>
           </div>
           <div class="form-group">
               <label for="inputEmail">Email</label>
               <input type="email" class="form-control " id="inputEmail" 
-              placeHolder="Email" required/>
+              placeHolder="Email@Provider.com" required/>
           </div>
           <div class="form-group">
               <label for="inputTextarea">Ihre Nachricht</label>
-              <textarea class="form-control" id="inputTextarea" rows="5" placeHolder="Ihre Nachricht"></textarea>
+              <textarea class="form-control" id="inputTextarea" rows="5" placeHolder="... "></textarea>
           </div>
           <button type="submit" class="btn btn-primary buttonSubmit"  data-toggle="modal" data-target="#contactModal">Absenden</button>
-        </form>
-        <br>
-        <h3 class="animated infinite pulse">berechnen Sie Ihre Route mit Google</h3>
-        <button class="btn openRoute animated infinite pulse"><span class="animated infinite pulse fas fa-map-marked-alt" ></span><br></button>
+          <br>
+        <h4 class="animated pulse delay-2s">berechnen Sie Ihre Route mit Google</h3>
+        <button class="btn openRoute animated pulse infinite"><span class="animated infinite pulse fas fa-map-marked-alt" ></span><br></button>
         <br><br>
+        </form>
+        
       </div>
         <!-- bp end -->
-        <!-- add to Route Button ?! -->
         <div id="map"></div>
-<!-- Modal -->
+        <br>
+
+
+
+
+ 
+    <script src="main.js"></script>
+    <!-- the script url api call should be after the initial script and map tag ?-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDLOKCxtRd_pEqn4_1eD2WjVXdtS8V4p3s&callback=initMap"
+    async defer></script>
+
+  </section>
+  <!-- end contact module -->
+
+  <!-- Modal -->
 <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -60,7 +83,7 @@
         </button>
       </div>
       <div class="modal-body">
-        Danke, für ihre Nachricht, wir werden uns in Kürze mit Ihnen in Verbindung setzen. 
+        Danke, für ihre Nachricht, wir werden uns in Kürze mit Ihnen in Verbindung setzen. <br><br><br>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -69,16 +92,6 @@
   </div>
 </div>
 <!-- end modal html -->
- 
-    <script src="main.js"></script>
-    <!-- the script url api call should be after the initial script and map tag ?-->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDLOKCxtRd_pEqn4_1eD2WjVXdtS8V4p3s&callback=initMap"
-    async defer></script>
-
-  </section>
-  <!-- end contact module -->
-
-  
   </body>
 </html>
 <!--old form
