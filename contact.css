@@ -7,7 +7,7 @@ html, body {
 /** contact form  **/
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 #map {
-	height: 100vH;
+	height: 50vH;
 	width: 100%;
 }
 #form-main{
@@ -34,7 +34,19 @@ html, body {
 	transition: all 0.3s;
   font-weight:700;
 }
-
+.fa-map-marked-alt {
+	font-size:100px;
+	color: #007bff;
+}
+.openRoute {
+	text-align: center;
+	border-radius: 100px;
+}
+.contact_module h3{
+	text-align:center;
+	width:100%;
+	padding:25px 0;
+}
 
 @media only Screen and (min-width : 992px) {
 	.form-wrapper {
@@ -45,5 +57,11 @@ html, body {
 		z-index:2;
 		box-sizing: unset;
 		background: rgba(255,255,255,.7);
+	}
+	.form-wrapper {
+		height:100vH;
+	}
+	#map {
+		height: 100vH;
 	}
 }

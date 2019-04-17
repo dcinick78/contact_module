@@ -6,6 +6,8 @@
     <meta charset="utf-8">
     <meta name="referrer" content="no-referrer">
     <link rel="stylesheet" type="text/css" media="screen" href="contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" media="screen" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
@@ -15,8 +17,6 @@
     <!-- start contact module-->
     <section class="contact_section"> <!-- structure class -->
       <div class="contact_module">
-
-
         <!-- boilerplate form -->
         <div class="form-wrapper">
         <form>
@@ -37,10 +37,14 @@
           </div>
           <div class="form-group">
               <label for="inputTextarea">Ihre Nachricht</label>
-              <textarea class="form-control" id="inputTextarea" rows="5"></textarea>
+              <textarea class="form-control" id="inputTextarea" rows="5" placeHolder="Ihre Nachricht"></textarea>
           </div>
           <button type="submit" class="btn btn-primary buttonSubmit"  data-toggle="modal" data-target="#contactModal">Absenden</button>
         </form>
+        <br>
+        <h3 class="animated infinite pulse">berechnen Sie Ihre Route mit Google</h3>
+        <button class="btn openRoute animated infinite pulse"><span class="animated infinite pulse fas fa-map-marked-alt" ></span><br></button>
+        <br><br>
       </div>
         <!-- bp end -->
         <!-- add to Route Button ?! -->
